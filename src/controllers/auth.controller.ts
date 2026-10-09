@@ -11,8 +11,7 @@ const hashCode = (code: string) => crypto.createHash("sha256").update(code).dige
 export const register = async (req: Request, res: Response) => {
   const { name, email, password } = req.body;
 
-  if (!nam
-  e || !email || !password) {
+  if (!name || !email || !password) {
     return res.status(400).json({ message: "Name, email and password are required" });
   }
 
